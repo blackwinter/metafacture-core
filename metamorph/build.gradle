@@ -25,6 +25,9 @@ dependencies {
   implementation project(':metafacture-mangling')
   implementation project(':metafacture-javaintegration')
   implementation 'org.slf4j:slf4j-api:1.7.21'
+  testImplementation project(':metafacture-io')
+  testImplementation project(':metafacture-json')
+  testImplementation project(':metafacture-strings')
   testImplementation 'junit:junit:4.12'
   testImplementation 'org.mockito:mockito-core:2.5.5'
   testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.21'
@@ -45,4 +48,6 @@ test {
     showStandardStreams = true
     exceptionFormat = 'full'
   }
+
+  systemProperties System.properties
 }
